@@ -1,26 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="titulo">
-    <ion-avatar >
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-title>livros</ion-title>
-    <ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-button (click)="showProfile()">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-searchbar color="dark" placeholder="Buscar Livro"></ion-searchbar>
+      <ion-title>UniLivros</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list *ngFor="let c of categorias">
-    <ion-item>{{c.nome}}</ion-item>
+    <ion-item color="dark">{{c.nome}}</ion-item>
 
-    <ion-list *ngFor="let l of livros">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-header>
-          <ion-card-title>{{l.titulo}}</ion-card-title>
-          <ion-card-subtitle>{{l.autor}}</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
-    </ion-list>
+      <ion-row color="dark">
+        <div class="livros" *ngFor="let l of livros">
+          <ion-card *ngIf="l.categoria == c.id">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header >
+              <ion-card-title >{{l.titulo}}</ion-card-title>
+              <ion-card-subtitle >{{l.autor}}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-row>
+
   </ion-list>
 
 </ion-content>

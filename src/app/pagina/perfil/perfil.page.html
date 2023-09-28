@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" (click)="showBooks()">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div class="divGeral">
+        <div class="divPerfil">
+          <img class="foto-perfil"
+            src="https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png"/>
+        </div>
+        <div class="info_card_perfil">
+          <ion-card color="dark">
+            <ion-card-header>
+              <ion-card-title>Nome</ion-card-title>
+              <ion-card-subtitle >Nome Completo</ion-card-subtitle>
+              <ion-card-title>Curso</ion-card-title>
+              <ion-card-subtitle >Curso do usuario</ion-card-subtitle>
+              <ion-card-title>Matricula</ion-card-title>
+              <ion-card-subtitle >matricula do usuario</ion-card-subtitle>
+              <ion-card-title>Status Atual: <div id="status">Boa</div></ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <div class="op-perfil">
+          <ion-button color="dark" href="https://sigaa.unifap.br/sigaa/portais/discente/discente.jsf" class="button_op">SIGAA</ion-button>
+          <ion-button color="dark" class="button_op">Livros emprestados</ion-button>
+          <ion-button color="dark" class="button_op">Lista de desejo</ion-button>
+        </div>
+    </div>
+</ion-content>

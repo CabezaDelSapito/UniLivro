@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'livros',
     loadChildren: () => import('./pagina/livros/livros.module').then( m => m.LivrosPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pagina/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pagina/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,3 +1,28 @@
-.titulo{
+ion-card{
+  display: flex;
+  flex-direction: column;
+  //width: 25%;
+  //margin-left:5%;
+}
+ion-card-title{
+  font-size: small;
+}
+ion-card-subtitle{
+  font-size: x-small;
+}
+ion-item{
+  margin-top: -2%;
+}
+ion-row{
+  background-color: gray;
+  margin-bottom: -2%;
+}
+ion-title{
   text-align: center;
+}
+.livros{
+  display: flex;
+  width: auto;
+  max-width: 25%;
+  //background-color: red;
 }
